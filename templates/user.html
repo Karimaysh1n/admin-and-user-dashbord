@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% block title %}user page.{% endblock %}
+{% block content %}
+
+
+
+<h2>Hi {{ username }} this is user page.</h2><br>
+
+
+if you want to create a new post click here:<br>
+<a href="{{ url_for('new_post') }}">
+    <button>
+        new post
+    </button>
+</a><br>
+
+
+{% for post in all_posts %}
+    <dt>title is : {{ post.title }}</dt>
+    <dd>content is : {{ post.content }}</dd>
+    <dd>by : {{ post.author.username }}</dd>
+    <dd>date of publish : {{ post.date_posted }}</dd>
+{% endfor %}
+
+
+
+
+
+
+if you want to logout click here:
+<a href="{{ url_for('logout') }}">
+    <button>
+        logout
+    </button>
+</a><br>
+
+
+{% endblock %}

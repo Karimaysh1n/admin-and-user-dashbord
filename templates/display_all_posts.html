@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block title %}admin page.{% endblock %}
+{% block content %}
+
+<h2>All Posts</h2>
+{% if posts_list %}
+    <ul>
+    {% for post in posts_list %}
+        <li>
+            <strong>{{ post.title }}</strong><br>
+            {{ post.content }}<br>
+            <small>By: {{ post.author }} | Posted on: {{ post.date_posted }}</small>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No posts to display.</p>
+{% endif %}
+
+
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block title %}new_post page.{% endblock %}
+{% block content %}
+
+<form action="{{ url_for('new_post') }}" method="post">
+
+    <label for="title">enter the title of the post here:</label>
+    <input type="text" id="title" name="title" required><br>
+
+    <label for="content">enter the content here:</label>
+    <input type="text" id="content" name="content" required><br>
+
+    <input type="submit" value="DONE"><br>
+
+</form>
+
+{% endblock %}

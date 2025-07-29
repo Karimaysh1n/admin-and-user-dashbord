@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login or register page</title>
+</head>
+<body>
+<header>
+  <h1>THIS IS KARIM WEBSITE.</h1>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for msg in messages %}
+        <div style="color: red; font-weight: bold;">{{ msg }}</div><br>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+</header>
+{% block content %}
+<main>
+if you want to register click this button:
+<a href="{{ url_for('register') }}">
+  <button>
+    register
+  </button>
+</a><br>
+
+if you want to login click this:
+<a href="{{ url_for('login') }}">
+  <button>
+    login
+  </button>
+</a><br>
+</main>
+{% endblock %}
+<footer>
+  <h1>ALL RIGHTS ARE SAVING.</h1>
+</footer>
+
+</body>
+</html>

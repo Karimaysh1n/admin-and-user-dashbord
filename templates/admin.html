@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block title %}admin page.{% endblock %}
+{% block content %}
+
+Hi {{ username }} you are an admin and you can do many things like:<br>
+1_ display_all_users ---------><a href="{{ url_for('display_all_users') }}"><button>display all users</button></a><br>
+2_update_user ----------------><a href="{{ url_for('update_user') }}"><button>update user</button></a><br>
+3_delete_user ----------------><a href="{{ url_for('delete_user') }}"><button>delete user</button></a><br>
+4_displau_all_users ----------><a href="{{ url_for('display_all_posts') }}"><button>display_all_posts</button></a><br>
+5_delete_any_post ------------><a href="{{ url_for('delete_any_post') }}"><button>delete any post</button></a><br>
+
+
+{% endblock %}

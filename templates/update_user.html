@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% block title %}admin page.{% endblock %}
+{% block content %}
+if you want to update a user enter his id:<br>
+
+<form action="{{ url_for('update_user') }}" method="POST">
+
+
+  <label for="id">enter his/her id here:</label>
+  <input type="text" id="id" name="id" required><br>
+
+
+  <label for="username">enter the new_username here:</label>
+  <input type="text" id="username" name="username" required><br>
+
+
+  <label for="password">enter the new password here:</label>
+  <input type="text" id="password" name="password" required><br>
+
+
+  <label for="role">enter the new role here:</label>
+  <input type="text" id="role" name="role" required><br>
+
+  <input type="submit" value="DONE" required><br>
+
+
+</form>
+
+
+{% endblock %}
